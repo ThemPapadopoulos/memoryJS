@@ -1,6 +1,7 @@
 window.addEventListener('load', (event) => {
       newBoard();
       timerStart();
+      counter.innerText=0;
     });
       
 
@@ -58,6 +59,7 @@ function myStopFunction() {
              if(tiles_flipped == memory_array.length){
                let time = counter.innerText;
                 alert("Board cleared in "+time+" seconds!" );
+                   counter.innerText=0;
                 document.getElementById('memory_board').innerHTML = "";
                 newBoard();
               }
